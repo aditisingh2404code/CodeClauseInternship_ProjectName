@@ -1,0 +1,207 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lobster&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9fb url('https://www.transparenttextures.com/patterns/cubes.png');
+  color: #333;
+}
+
+/* Hide elements */
+.hidden {
+  display: none !important;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+}
+
+/* Search Bar */
+#searchInput {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+#searchInput:focus {
+  border-color: #7b2ff7;
+  box-shadow: 0 0 8px rgba(123,47,247,0.5);
+}
+
+/* Recipe Cards Grid */
+#recipeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Smaller Image Size */
+.card img {
+  width: 180px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 15px;
+}
+
+.card h3 {
+  margin: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0 15px 15px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Buttons */
+button {
+  border: none;
+  padding: 8px 14px;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+button.view-btn {
+  background: #7b2ff7;
+  color: white;
+}
+
+button.edit-btn {
+  background: #ffb400;
+  color: white;
+}
+
+button.delete-btn {
+  background: #ff4757;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Add Recipe Button */
+#addRecipeBtn {
+  float: right;
+  background: #28c76f;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 12px;
+  margin-top: -55px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+#addRecipeBtn:hover {
+  background: #20a35a;
+}
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+}
+
+.close:hover {
+  color: #000;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 30px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.95);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+
