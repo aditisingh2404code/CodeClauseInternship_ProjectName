@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Link Shortener Pro</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- QRCode Library -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🔗 Link Shortener Pro</h1>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <main>
+    <!-- Input Section -->
+    <section class="shortener">
+      <input type="text" id="longUrl" placeholder="Enter long URL here..." />
+      <input type="text" id="customAlias" placeholder="Custom alias (optional)" />
+      <button id="shortenBtn">Shorten URL</button>
+    </section>
+
+    <!-- Result Section -->
+    <section id="result" class="hidden">
+      <p>Your shortened URL:</p>
+      <div class="output">
+        <input type="text" id="shortUrl" readonly />
+        <button id="copyBtn">📋 Copy</button>
+      </div>
+      <canvas id="qrCode"></canvas>
+      <button id="downloadQR" class="hidden">⬇️ Download QR</button>
+    </section>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="hidden">
+      <h2>📊 Link Analytics</h2>
+      <div id="analyticsData"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ during CodeClause Internship</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
